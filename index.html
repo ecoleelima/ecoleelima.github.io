@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>École Privée ELIMA | Excellence & Avenir</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- LE CODE DE FOND SE MET ICI -->
+    <style>
+        body {
+            background-image: url('../app/eleves2.jpg'); /* Votre photo en fond */
+            background-size: cover;                  /* Couvre tout l'écran */
+            background-position: center;             /* Centre la photo */
+            background-repeat: no-repeat;            /* Pas de répétition */
+            background-attachment: fixed;            /* Reste fixe au défilement */
+            /* Style de la boîte d'alerte des dons */
+.zone-don {
+    background-color: #fef9e7; /* Fond jaune très clair et chaleureux */
+    border-left: 6px solid #f39c12; /* Ligne orange vive sur le côté pour attirer l'œil */
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Ombre pour décoller le bloc du fond */
+    text-align: center;
+}
+
+.zone-don h2 {
+    color: #d35400; /* Titre en orange foncé/rouge */
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.zone-don p {
+    color: #2c3e50; /* Texte sombre très lisible */
+    font-size: 16px;
+    line-height: 1.5;
+}
+            /* Style de la section du formulaire */
+.section-inscription {
+    background-color: #ffffff;
+    border: 2px solid #34495e;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+    text-align: left; /* Aligné à gauche pour les champs */
+}
+
+.section-inscription h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 0;
+}
+
+.section-inscription p {
+    text-align: center;
+    color: #7f8c8d;
+}
+            /* 3. LE CODE CSS DU FORMULAIRE D'INSCRIPTION (PLACÉ ICI) */
+        .form-inscription {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #dcdde1;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .form-inscription h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .form-inscription .intro-form {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        .champ-groupe {
+            margin-bottom: 20px;
+        }
+
+        .form-inscription label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2f3640;
+            font-size: 14px;
+        }
+
+        .form-inscription input[type="text"],
+        .form-inscription input[type="email"],
+        .form-inscription select,
+        .form-inscription textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #f5f6fa;
+            background-color: #f5f6fa;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+            color: #2f3640;
+        }
+
+        .form-inscription input:focus,
+        .form-inscription select:focus,
+        .form-inscription textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            background-color: #ffffff;
+        }
+
+        .bouton-validation {
+            width: 100%;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .bouton-validation:hover {
+            background-color: #27ae60;
+        }
+
+
+/* Style des champs de texte */
+.section-inscription label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.section-inscription input[type="text"],
+.section-inscription input[type="email"],
+.section-inscription textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box; /* Évite que les champs dépassent */
+    font-family: Arial, sans-serif;
+}
+
+/* Style du bouton d'envoi */
+.bouton-envoi {
+    display: block;
+    width: 100%;
+    background-color: #27ae60; /* Vert pour la validation */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bouton-envoi:hover {
+    background-color: #219653; /* Vert plus foncé au survol */
+}
+
+/* Style du bouton d'action */
+.bouton-don {
+    display: inline-block;
+    background-color: #e74c3c; /* Bouton rouge/rouge-gorge très visible */
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+/* Animation quand on passe la souris sur le bouton */
+.bouton-don:hover {
+    background-color: #c0392b; /* Rouge plus foncé au survol */
+    transform: scale(1.05); /* Le bouton grossit légèrement */
+}
+        }
+    /* Style pour rendre le texte du bas très clair et lisible */
+.pied-page {
+    background-color: rgba(44, 62, 80, 0.85); /* Fond sombre semi-transparent */
+    color: #ffffff; /* Écriture blanche parfaite */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.pied-page p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+    
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header>
+        <div class="logo">École <span>ELIMA</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#niveaux">Nos Niveaux</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Donnez des ailes à l'avenir de vos enfants</h1>
+          
+            <p>L'École Privée ELIMA offre un enseignement de qualité basé sur la rigueur, l'épanouissement et l'innovation.</p>
+            <a href="#contact" class="btn">Inscrire mon enfant</a>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="about">
+        <h2>Pourquoi choisir ELIMA ?</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Excellence Académique</h3>
+                <p>Des programmes complets et un suivi personnalisé pour la réussite de chaque élève.</p>
+            </div>
+            <div class="about-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Enseignants Qualifiés</h3>
+                <p>Une équipe pédagogique passionnée, expérimentée et à l'écoute des enfants.</p>
+            </div>
+            <div class="about-card">
+                <i class="fas fa-heart"></i>
+                <h3>Cadre Idéal</h3>
+                <p>Un environnement sécurisé, propre et stimulant, propice à l'apprentissage.</p>
+            </div>
+        </div>
+    </section>
+    <!-- BLOC APPEL AUX DONS -->
+<div class="zone-don">
+    <h2>Sostenete la nostra Scuola e i nostri Studenti! 🎒</h2>
+    <p>Per finanziare i futuri lavori di ristrutturazione delle aule e fornire nuovo materiale didattico ai nostri studenti, abbiamo bisogno della vostra generosità.</p>
+   
+    <a href="dons.html" class="bouton-don">Fare une donazione tramite bonifico bancario 💳</a>
+</div>
+
+        <!-- Section Niveaux Scolaires -->
+    <section id="niveaux" class="levels">
+        <h2>Nos Niveaux d'Enseignement</h2>
+        <div class="levels-container">
+            <div class="level-box">
+                <h3>Maternelle</h3>
+                <p>Éveil, motricité et socialisation à travers le jeu et la créativité.</p>
+                <a href="maternelle.html" class="btn-level">Découvrir la Maternelle</a>
+            </div>
+            <div class="level-box">
+                <h3>Primaire</h3>
+                <p>Acquisition des bases fondamentales (lecture, écriture, calcul) et autonomie.</p>
+                <a href="primaire.html" class="btn-level">Découvrir le Primaire</a>
+            </div>
+            <div class="level-box">
+                <h3>Secondaire & Lycée</h3>
+                <p>Approfondissement des connaissances, esprit critique et préparation intensive au Baccalauréat.</p>
+                <a href="secondaire-lycee.html" class="btn-level">Découvrir ce Cycle</a>
+            </div>
+        </div>
+    </section>
+  
+
+            <!-- Boutons de navigation -->
+            <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Section Contact & Inscriptions -->
+    <section id="contact" class="contact">
+        <h2>Contact & Inscriptions</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Restons en contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Adresse: Hell-ville NOSY/BE Dzamandzar usine</p>
+                <p><i class="fas fa-phone"></i> Contacte: +261326249007 / +261341509226</p>
+                <p><i class="fas fa-envelope"></i>Email: ecoleelima@gmail.com</p>
+            </div>
+            
+            <!-- Formulaire relié à votre e-mail (remplacez bien VOTRE_EMAIL@GMAIL.COM) -->
+<form action="https://formspree.io/f/xpqeoded" method="POST" class="form-inscription">
+    
+    
+    <!-- Redirection automatique après l'envoi du message -->
+    <input type="hidden" name="_next" value="https://tiiny.site">
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- 1. Nom complet des parents -->
+    <div class="champ-groupe">
+        <label for="nom_parents">Nom complet des parents / Anaran'ny ray aman-dreny :</label>
+        <input type="text" id="nom_parents" name="Nom_Complet_Parents" placeholder="Ex: M. et Mme Rossi" required>
+    </div>
+
+    <!-- 2. Adresse e-mail -->
+    <div class="champ-groupe">
+        <label for="email_parents">Adresse email / Adiresy imailaka :</label>
+        <input type="email" id="email_parents" name="Email_Parents" placeholder="Ex: parents@email.com" required>
+    </div>
+
+    <!-- 3. Numéro de téléphone -->
+    <div class="champ-groupe">
+        <label for="telephone">Numéro de téléphone / Laharan-telefaonina :</label>
+        <input type="text" id="telephone" name="Telephone_Parents" placeholder="Ex: +261 34 XX XXX XX" required>
+    </div>
+
+    <!-- 4. Choisir un niveau d'inscription -->
+    <div class="champ-groupe">
+        <label for="niveau">Choisir un niveau d'inscription / Safidio ny taona hianarana :</label>
+        <select id="niveau" name="Niveau_Inscription" required>
+            <option value="" disabled selected>-- Sélectionnez un niveau --</option>
+            <option value="Maternelle">Maternelle (Crèche / Jardin d'enfants)</option>
+            <option value="Primaire">Primaire (T1 à T5 / CP à CM2)</option>
+            <option value="College">Collège (6ème à 3ème)</option>
+            <option value="Lycee">Lycée (Seconde à Terminale)</option>
+        </select>
+    </div>
+
+    <!-- 5. Message -->
+    <div class="champ-groupe">
+        <label for="message">Message / Hafatra fanampiny :</label>
+        <textarea id="message" name="Message" rows="5" placeholder="Écrivez les détails de votre demande ici..." required></textarea>
+    </div>
+
+    <!-- Le bouton unique avec type="submit" -->
+    <button type="submit" class="bouton-validation">Envoyer la demande d'inscription 🚀</button>
+
+</form>
+        </div>
+    </section>
+
+
+  
+        
+        <!-- REMPLACEZ VOTRE ANCIEN FOOTER PAR CELUI-CI : -->
+<footer class="pied-page">
+    <p>© 2026 - École Elima. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

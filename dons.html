@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du Virement - École Elima</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f7;
+            color: #2c3e50;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .boite-banque {
+            background: white;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: left; /* Aligné à gauche pour une lecture plus facile des chiffres */
+        }
+        h1 { 
+            color: #d35400; 
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        .info-groupe {
+            margin-bottom: 18px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        .titre-champ {
+            font-weight: bold;
+            color: #7f8c8d;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+        .valeur-champ {
+            font-size: 16px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .iban-box {
+            background: #fef9e7;
+            border: 2px dashed #f39c12;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            word-break: break-all;
+            color: #d35400;
+            font-weight: bold;
+        }
+        .section-inter {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border-left: 4px solid #34495e;
+        }
+        .section-inter h3 {
+            margin-top: 0;
+            font-size: 14px;
+            color: #34495e;
+        }
+        .bouton-retour {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .bouton-retour:hover {
+            text-decoration: underline;
+        }
+        .text-center { text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="boite-banque">
+        <h1>Coordonnées Bancaires / Coordinate Bancarie 🏫</h1>
+        <p class="text-center">Grazie di cuore per il vostro sostegno alla Scuola Elima.<br>
+        <small><i>Merci du fond du cœur pour votre soutien à l'École Elima..</i></small></p>
+        
+        <br>
+
+        <!-- Titulaire -->
+        <div class="info-groupe">
+            <p class="titre-champ">Intestatario del conto / 
+Titulaire du compte :</p>
+            <p class="valeur-champ"><strong>VENTY LOUIS BENEDIT</strong></p>
+        </div>
+
+        <!-- Banque -->
+        <div class="info-groupe">
+            <p class="titre-champ">Banque / Banky :</p>
+            <p class="valeur-champ">AccèsBanque Madagascar</p>
+        </div>
+
+        <!-- IBAN -->
+        <div class="info-groupe">
+            <p class="titre-champ">IBAN :</p>
+            <div class="iban-box">MG46 0001 1000 1424 1007 4052 419</div>
+        </div>
+
+        <!-- BIC -->
+        <div class="info-groupe">
+            <p class="titre-champ">BIC / SWIFT (Banque du bénéficiaire) :</p>
+            <p class="valeur-champ"><strong>ABMGMGMG</strong></p>
+        </div>
+
+        <!-- Informations Internationales / Virement depuis l'étranger -->
+        <div class="section-inter">
+            <h3>Pour les virements depuis l'étranger (Banque correspondante) :</h3>
+            
+            <div style="margin-bottom: 10px;">
+                <span style="font-size: 12px; color: #7f8c8d; display:block;">Banque correspondante :</span>
+                <strong>Société Générale Paris</strong>
+            </div>
+            
+            <div>
+                <span style="font-size: 12px; color: #7f8c8d; display:block;">BIC Banque correspondante :</span>
+                <strong>SOGEFRPP</strong>
+            </div>
+        </div>
+
+        <p class="text-center" style="margin-top: 25px;">
+            <small>⚠️ <i>Si prega di indicare "DON ECOLE ELIMA" come causale del bonifico. /Veuillez indiquer "DON ECOLE ELIMA" comme motif du virement.</i></small>
+        </p>
+
+        <a href="index.html" class="bouton-retour">← Retour au site de l'école</a>
+    </div>
+
+</body>
+</html>

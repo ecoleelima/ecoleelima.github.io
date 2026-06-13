@@ -1,0 +1,473 @@
+/* ==========================================================================
+   1. STYLES GÉNÉRAUX & RÉINITIALISATION
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #fcfcfc;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #0c2461;
+    position: relative;
+}
+
+/* Petite ligne de décoration sous les grands titres h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #e67e22;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Boutons Standards */
+.btn {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(230, 126, 34, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(211, 84, 0, 0.3);
+}
+
+/* ==========================================================================
+   2. BARRE DE NAVIGATION (HEADER)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0c2461;
+    padding: 1rem 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #e67e22;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e67e22;
+}
+
+/* Menu Burger pour Mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   3. SECTION ACCUEIL (HERO)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(12, 36, 97, 0.75), rgba(12, 36, 97, 0.75)), url('https://unsplash.com') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   4. SECTION À PROPOS (AVANTAGES)
+   ========================================================================== */
+.about {
+    padding: 6rem 10%;
+    background: #f4f6f9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.about-card {
+    background: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid #e67e22;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-card i {
+    font-size: 3.5rem;
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+}
+
+.about-card h3 {
+    margin-bottom: 1rem;
+    color: #0c2461;
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   5. SECTION NIVEAUX SCOLAIRES (ACCUEIL)
+   ========================================================================== */
+.levels {
+    padding: 6rem 10%;
+    background: #fff;
+}
+
+.levels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.level-box {
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    background: #0c2461;
+    color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(12, 36, 97, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.level-box:hover {
+    transform: scale(1.03);
+}
+
+.level-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+}
+
+.level-box p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Boutons spécifiques à l'intérieur des boîtes de niveaux */
+.btn-level {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-level:hover {
+    background: #fff;
+    color: #0c2461;
+}
+
+/* ==========================================================================
+   6. SECTION DIAPORAMA (GALERIE PHOTOS)
+   ========================================================================== */
+.gallery {
+    padding: 6rem 10%;
+    background: #f4f6f9;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 850px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(12, 36, 97, 0.85);
+    color: #fff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+/* Boutons Flèches du diaporama */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(230, 126, 34, 0.85);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #d35400;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* ==========================================================================
+   7. SECTION CONTACT & FORMULAIRE
+   ========================================================================== */
+.contact {
+    padding: 6rem 10%;
+    background: #fff;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+}
+
+.contact-info h3 {
+    color: #0c2461;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    color: #e67e22;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    width: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background: #f4f6f9;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    margin-bottom: 1.2rem;
+    padding: 0.9rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #0c2461;
+}
+
+/* ==========================================================================
+   8. PAGES ENFANTS (Maternelle, Primaire, Secondaire-Lycée)
+   ========================================================================== */
+.page-header {
+    background: linear-gradient(135deg, #0c2461 0%, #1e3799 100%);
+    color: #fff;
+    padding: 9rem 10% 5rem 10%;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header h1 i {
+    margin-right: 15px;
+    color: #e67e22;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.page-content {
+    padding: 5rem 10%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.page-content h3 {
+    color: #0c2461;
+    margin: 2.5rem 0 1.2rem 0;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.page-content h3 i {
+    margin-right: 10px;
+    color: #e67e22;
+    font-size: 1.4rem;
+}
+
+.page-content ul {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    list-style-type: none; /* Supprime les puces par défaut */
+}
+
+.page-content ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+/* Ajoute une jolie puce orange devant chaque élément de liste */
+.page-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #e67e22;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   9. BOUTON FLOTTANT WHATSAPP
+   ========================================================================== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    
