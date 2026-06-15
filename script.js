@@ -53,3 +53,48 @@ function changeSlide(direction) {
 setInterval(() => {
     changeSlide(1);
 }, 4000);
+// Ouverture et fermeture de la fenêtre de discussion
+function toggleChat() {
+    const chatWrapper = document.getElementById('chat-assistant');
+    chatWrapper.classList.toggle('open');
+}
+
+// Réponses de l'assistant automatique
+function askBot(topic) {
+    const chatBody = document.getElementById('chat-dynamic-replies');
+    let userQuestion = "";
+    let botReply = "";
+
+    // Base de données des questions / réponses
+    if (topic === 'inscriptions') {
+        userQuestion = "Comment s'inscrire et quelles sont les pièces ?";
+        botReply = "Pour s'inscrire à l'École Privée ELIMA, veuillez fournir un acte de naissance de l'enfant, ses derniers bulletins scolaires, ainsi qu'une photo d'identité. Les dossiers se déposent au secrétariat.";
+    } else if (topic === 'tarifs') {
+        userQuestion = "Quels sont les frais de scolarité ?";
+        botReply = "Nos tarifs varient selon les cycles (Primaire, Secondaire, Lycée). Les frais incluent le droit d'inscription annuel et l'écolage mensuel. Pour un devis précis, merci de nous laisser vos coordonnées dans notre formulaire en bas de page.";
+    } else if (topic === 'uniforme') {
+        userQuestion = "L'uniforme est-il obligatoire ?";
+        botReply = "Oui, le port de l'uniforme réglementaire (ou de la blouse officielle de l'école) est obligatoire pour tous nos élèves, de la rentrée jusqu'à la fin de l'année scolaire.";
+    } else if (topic === 'horaires') {
+        userQuestion = "Quels sont les horaires des cours ?";
+        botReply = "Les cours ont lieu du lundi au vendredi. Le matin de 07h30 à 12h00, et l'après-midi de 13h30 à 16h00. Il n'y a pas de cours le mercredi après-midi.";
+    }
+
+    // Affichage de la question de l'utilisateur dans la bulle
+    const userDiv = document.createElement('div');
+    userDiv.className = 'msg user-msg';
+    userDiv.innerText = userQuestion;
+    chatBody.appendChild(userDiv);
+
+    // Petit effet d'attente pour simuler une écriture humaine (0,4 seconde)
+    setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = 'msg bot-msg';
+        botDiv.innerText = botReply;
+        chatBody.appendChild(botDiv);
+        
+        // Fait descendre automatiquement le défilement vers le bas
+        const bodyZone = document.querySelector('.chat-body');
+        bodyZone.scrollTop = bodyZone.scrollHeight;
+    }, 400);
+}
