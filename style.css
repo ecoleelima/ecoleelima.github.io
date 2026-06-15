@@ -300,6 +300,34 @@ header {
     font-weight: bold;
     backdrop-filter: blur(5px);
 }
+/* Section Vidéo */
+.video-section {
+    padding: 6rem 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background-color: #000; /* Fond noir pendant le chargement de la vidéo */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adaptation pour les téléphones */
+@media screen and (max-width: 768px) {
+    .video-section {
+        padding: 4rem 5%;
+    }
+}
 
 /* Boutons Flèches du diaporama */
 .prev-btn, .next-btn {
