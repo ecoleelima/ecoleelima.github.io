@@ -412,6 +412,44 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Assistant Automatique de Discussion -->
+    <div id="chat-assistant" class="chat-wrapper">
+        <!-- Bulle d'ouverture -->
+        <button class="chat-badge" onclick="toggleChat()">
+            <i class="fas fa-comments"></i> <span>Aide en ligne</span>
+        </button>
+
+        <!-- Fenêtre de discussion -->
+        <div class="chat-window">
+            <div class="chat-header">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h4>Assistant ELIMA</h4>
+                    <small>En ligne • Réponses instantanées</small>
+                </div>
+                <button class="close-chat" onclick="toggleChat()">&times;</button>
+            </div>
+            
+            <div class="chat-body">
+                <!-- Message de bienvenue de l'assistant -->
+                <div class="msg bot-msg">
+                    Bonjour ! Je suis l'assistant automatique de l'École Privée ELIMA. Comment puis-je vous aider aujourd'hui ?
+                </div>
+                <div id="chat-dynamic-replies"></div>
+            </div>
+
+            <!-- Menu des questions cliquables -->
+            <div class="chat-footer">
+                <p class="chat-hint">Sélectionnez une question :</p>
+                <div class="chat-options">
+                    <button onclick="askBot('inscriptions')">📝 Inscriptions & Pièces ?</button>
+                    <button onclick="askBot('tarifs')">💰 Frais de scolarité ?</button>
+                    <button onclick="askBot('uniforme')">👕 Uniforme obligatoire ?</button>
+                    <button onclick="askBot('horaires')">⏰ Horaires des cours ?</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
