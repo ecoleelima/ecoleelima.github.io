@@ -142,6 +142,86 @@ header {
     margin-right: auto;
     opacity: 0.9;
 }
+/* ==========================================================================
+   DÉCORATION FINALE DU PORTRAIT DU DIRECTEUR
+   ========================================================================== */
+.directeur-img {
+    background: #f4f6f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border: 3px solid #e67e22;
+    overflow: hidden; /* Empêche les coins du format PNG de dépasser du cercle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.directeur-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Centre et ajuste le visage parfaitement au milieu du rond */
+}
+
+/* ==========================================================================
+   STYLE SECTION ACTUALITÉS
+   ========================================================================== */
+.news-section {
+    padding: 6rem 10%;
+    background: #f4f6f9;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e67e22;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.news-badge.unique {
+    background: #25d366; /* Vert pour célébrer les examens */
+}
+
+.news-content {
+    padding: 2rem;
+}
+
+.news-content h3 {
+    color: #0c2461;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.news-content p {
+    color: #666;
+    font-size: 1rem;
+}
 
 /* ==========================================================================
    4. SECTION À PROPOS (AVANTAGES)
