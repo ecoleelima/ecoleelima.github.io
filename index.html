@@ -340,6 +340,71 @@
             </video>
         </div>
     </section>
+    <!-- ==========================================================================
+         SECTION PAIEMENT DE L'ÉCOLAGE EN LIGNE (À PLACER ICI)
+         ========================================================================== -->
+    <section id="paiement" class="payment-section">
+        <h2>Paiement de l'Écolage en Ligne</h2>
+        <p class="payment-subtitle">Réglez la scolarité de votre enfant instantanément par Mvola ou Orange Money</p>
+        
+        <div class="payment-container">
+            <form class="payment-form" id="ecolageForm">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nom complet de l'élève :</label>
+                    <input type="text" id="student_name" placeholder="Ex: Jean RAKOTO" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-graduation-cap"></i> Niveau de l'élève :</label>
+                    <select id="student_class" onchange="mettreAJourTarif()" required>
+                        <option value="">Sélectionner le niveau...</option>
+                        <option value="maternelle">Maternelle</option>
+                        <option value="primaire">Primaire</option>
+                        <option value="secondaire">Secondaire (Collège)</option>
+                        <option value="lycee">Lycée</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-tags"></i> Frais de scolarité mensuel :</label>
+                    <input type="text" id="display_price" readonly placeholder="Sélectionnez un niveau pour voir le tarif">
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-wallet"></i> Mode de paiement :</label>
+                    <div class="payment-methods">
+                        <label class="method-card">
+                            <input type="radio" name="operator" value="mvola" required>
+                            <span class="method-name mvola">Mvola</span>
+                        </label>
+                        <label class="method-card">
+                            <input type="radio" name="operator" value="orange" required>
+                            <span class="method-name orange">Orange Money</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-money-bill-wave"></i> Mois à payer :</label>
+                    <select id="payment_month" required>
+                        <option value="">Choisir le mois...</option>
+                        <option value="septembre">Septembre</option>
+                        <option value="octobre">Octobre</option>
+                        <option value="novembre">Novembre</option>
+                        <option value="decembre">Décembre</option>
+                        <option value="janvier">Janvier</option>
+                        <option value="fevrier">Février</option>
+                        <option value="mars">Mars</option>
+                        <option value="avril">Avril</option>
+                        <option value="mai">Mai</option>
+                        <option value="juin">Juin</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-payment"><i class="fas fa-credit-card"></i> Procéder au paiement sécurisé</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Section Contact & Inscriptions -->
     <section id="contact" class="contact">
