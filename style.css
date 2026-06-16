@@ -708,4 +708,136 @@ header {
     background: #0c2461;
     color: white;
 }
+/* ==========================================================================
+   STYLE COMPLET DE L'ESPACE PAIEMENT (MVOLA / ORANGE MONEY)
+   ========================================================================== */
+.payment-section {
+    padding: 6rem 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.payment-subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #0c2461;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+/* Style spécifique pour le champ d'affichage automatique du tarif */
+#display_price {
+    background-color: #f1f5f9 !important; /* Fond gris clair (lecture seule) */
+    color: #0c2461 !important; /* Bleu marine de l'école */
+    font-weight: bold !important;
+    border: 2px solid #cbd5e1 !important;
+    font-size: 1.1rem !important;
+    cursor: not-allowed;
+}
+
+/* Sélection visuelle des opérateurs Mvola / Orange Money */
+.payment-methods {
+    display: flex;
+    gap: 1rem;
+}
+
+.method-card {
+    flex: 1;
+    cursor: pointer;
+}
+
+.method-card input {
+    display: none; /* Masque le bouton radio natif */
+}
+
+.method-name {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* Comportement visuel quand le parent sélectionne Mvola */
+.method-card input:checked + .method-name.mvola {
+    border-color: #00a859;
+    background: #e6f6ef;
+    color: #00a859;
+    box-shadow: 0 4px 10px rgba(0, 168, 89, 0.15);
+}
+
+/* Comportement visuel quand le parent sélectionne Orange Money */
+.method-card input:checked + .method-name.orange {
+    border-color: #ff6600;
+    background: #fff0e6;
+    color: #ff6600;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.15);
+}
+
+/* Bouton de validation du paiement */
+.btn-payment {
+    width: 100%;
+    background: #00a859; /* Vert de sécurité bancaire */
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 168, 89, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-payment:hover {
+    background: #008445;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 168, 89, 0.3);
+}
+
+/* Adaptation pour l'affichage sur les smartphones */
+@media screen and (max-width: 768px) {
+    .payment-section {
+        padding: 4rem 5%;
+    }
+    .payment-container {
+        padding: 1.5rem;
+    }
+    .payment-methods {
+        flex-direction: column; /* Aligne les deux logos l'un sous l'autre sur mobile */
+        gap: 0.5rem;
+    }
+}
     
