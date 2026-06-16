@@ -58,6 +58,99 @@ h2::after {
 /* ==========================================================================
    2. BARRE DE NAVIGATION (HEADER)
    ========================================================================== */
+/* --- TOUT A ÉTÉ EFFACÉ ET REMPLACÉ PAR CE BLOC PROPRE --- */
+.header-ecole {
+    width: 100%;
+    padding: 25px 15px;
+    background: #0b1329;
+    border-bottom: 3px solid #f59e0b;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+}
+
+.titre-flottant-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sous-titre {
+    font-size: 14px;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 6px;
+    margin-bottom: -5px;
+}
+
+.grand-titre-elima {
+    font-size: 56px;
+    font-weight: 900;
+    color: #f59e0b;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 1px 0 #d97706, 0 2px 0 #b45309, 0 3px 0 #78350f, 0 10px 10px rgba(0, 0, 0, 0.6);
+    animation: flotter 3s ease-in-out infinite;
+}
+
+@keyframes flotter {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.nav-links-ecole {
+    display: flex;
+    flex-direction: row; 
+    gap: 12px; 
+    width: 100%;
+    justify-content: center; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 5px 10px 10px 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-links-ecole::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-links-ecole a {
+    color: #ffffff;
+    font-size: 16px; 
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 18px; 
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.votre-barre-de-navigation {
+    /* Rend la barre flottante au-dessus du contenu */
+    position: relative; 
+    z-index: 50;
+    
+    /* Ajoute un contour fin et propre */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Contour blanc semi-transparent */
+    border-radius: 12px; /* Arrondit les angles pour un effet moderne */
+    
+    /* Crée l'effet d'ombre pour faire flotter la barre */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 
+                0 8px 10px -6px rgba(0, 0, 0, 0.3);
+                
+    /* Espacement interne pour que le texte ne colle pas aux bords */
+    padding: 15px 25px; 
+}
+
 header {
     display: flex;
     justify-content: space-between;
