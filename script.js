@@ -98,3 +98,54 @@ function askBot(topic) {
         bodyZone.scrollTop = bodyZone.scrollHeight;
     }, 400);
 }
+// ==========================================================================
+// LOGIQUE DE PAIEMENT : CALCUL DU TARIF & REDIRECTION SECURISEE (MVOLA / ORANGE MONEY)
+// ==========================================================================
+function mettreAJourTarif() {
+    const niveau = document.getElementById('student_class').value;
+    const champPrix = document.getElementById('display_price');
+    
+    if (!champPrix) return;
+
+    // Grille tarifaire officielle en Ariary
+    const tarifs = {
+        'maternelle': '25 000 Ariary',
+        'primaire': '21 000 Ariary',
+        'secondaire': '23 000 Ariary',
+        'lycee': '25 000 Ariary'
+    };
+    
+    // Met à jour la valeur instantanément à l'écran
+    if (niveau && tarifs[niveau]) {
+        champPrix.value = tarifs[niveau];
+    } else {
+        champPrix.value = "";
+    }
+}
+
+// Déclenchement lors de la validation du formulaire de paiement
+const formEcolage = document.getElementById('ecolageForm');
+if (formEcolage) {
+    formEcolage.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const eleve = document.getElementById('student_name').value;
+        const niveau = document.getElementById('student_class').value;
+        const mois = document.getElementById('payment_month').value;
+        const prix = document.getElementById('display_price').value;
+        const operateur = document.querySelector('input[name="operator"]:checked').value;
+        
+        if (operateur === 'mvola') {
+            const numeroMvolaELIMA = "0341509226";
+            alert(`Paiement Mvola initié pour ${eleve} (${niveau.toUpperCase()})\nMois : ${mois} • Montant : ${prix}.\n\nNuméro marchand destinataire : ${numeroMvolaELIMA}`);
+            // Redirection vers le portail officiel web de Mvola
+            window.location.href = `https://mvola.mg{encodeURIComponent('Ecolage ' + mois + ' - ' + eleve)}&to=${numeroMvolaELIMA}`;
+            
+        } else if (operateur === 'orange') {
+            const numeroOrangeELIMA = "0326249007";
+            alert(`Paiement Orange Money initié pour ${eleve} (${niveau.toUpperCase()})\nMois : ${mois} • Montant : ${prix}.\n\nNuméro marchand destinataire : ${numeroOrangeELIMA}`);
+            // Redirection vers l'API Orange Money Web Payment
+            window.location.href = `https://orange.mg{numeroOrangeELIMA}&amount=auto&reason=${encodeURIComponent('Ecolage ' + mois + ' - ' + eleve)}`;
+        }
+    });
+}
