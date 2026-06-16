@@ -150,7 +150,6 @@ h2::after {
     /* Espacement interne pour que le texte ne colle pas aux bords */
     padding: 15px 25px; 
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -163,16 +162,39 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
-.logo {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+.header-ecole {
+    /* Positionnement et alignement parfaits */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    
+    /* Look Moderne : Fond blanc semi-transparent avec effet verre flouté */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Floute légèrement l'image derrière pour l'élégance */
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Une fine bordure basse pour délimiter proprement */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    
+    /* Ombre discrète et professionnelle (effet flottant subtil) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.logo span {
-    color: #e67e22;
+/* Style des liens du menu pour éviter les chevauchements */
+.nav-links-ecole {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espacement fixe entre chaque mot */
+}
+
+.nav-links-ecole a {
+    color: #1e3a8a; /* Un bleu foncé professionnel au lieu du blanc sur bleu */
+    font-size: 14px; /* Taille réduite adaptée aux téléphones */
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap; /* Empêche strictement un mot de se couper ou d'aller à la ligne */
 }
 
 .nav-links {
@@ -314,6 +336,14 @@ header {
 .news-content p {
     color: #666;
     font-size: 1rem;
+}
+
+/* Adaptation pour les téléphones */
+@media screen and (max-width: 768px) {
+    .directeur-block {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* ==========================================================================
@@ -473,6 +503,7 @@ header {
     font-weight: bold;
     backdrop-filter: blur(5px);
 }
+
 /* Section Vidéo */
 .video-section {
     padding: 6rem 10%;
@@ -501,7 +532,6 @@ header {
         padding: 4rem 5%;
     }
 }
-
 /* Boutons Flèches du diaporama */
 .prev-btn, .next-btn {
     position: absolute;
@@ -528,6 +558,75 @@ header {
 
 .prev-btn { left: 20px; }
 .next-btn { right: 20px; }
+
+/* ==========================================================================
+   STYLE SECTION FAQ (ACCORDÉON)
+   ========================================================================== */
+.faq-section {
+    padding: 6rem 10%;
+    background: #f4f6f9;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+}
+
+.faq-question {
+    width: 100%;
+    background: #fff;
+    color: #0c2461;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Changement de couleur de la flèche si survolée en blanc */
+.faq-question:hover i {
+    color: #fff;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fafafa;
+}
+
+/* Sécurité : Si le clic fonctionne, on affiche le texte */
+.faq-item.active .faq-answer {
+    max-height: 300px !important; /* Force l'ouverture du volet */
+}
+
+.faq-answer p {
+    padding: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+/* Rotation de la flèche quand la question est ouverte */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
 
 /* ==========================================================================
    7. SECTION CONTACT & FORMULAIRE
@@ -585,6 +684,18 @@ header {
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
     outline: none;
     border-color: #0c2461;
+}
+/* Décoration du cadre de la carte Google Maps */
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #cbd5e1;
+}
+
+.map-container iframe {
+    display: block;
 }
 
 /* ==========================================================================
@@ -801,6 +912,8 @@ header {
     background: #0c2461;
     color: white;
 }
+
+
 /* ==========================================================================
    STYLE COMPLET DE L'ESPACE PAIEMENT (MVOLA / ORANGE MONEY)
    ========================================================================== */
@@ -933,4 +1046,6 @@ header {
         gap: 0.5rem;
     }
 }
+    
+
     
