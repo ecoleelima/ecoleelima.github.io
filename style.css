@@ -451,6 +451,38 @@ header {
     background: #fff;
     color: #0c2461;
 }
+.temoignage {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.temoignage h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.temoignage img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.temoignage p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.temoignage strong {
+    color: #2c3e50;
+    font-size: 18px;
+}
 
 /* ==========================================================================
    6. SECTION DIAPORAMA (GALERIE PHOTOS)
