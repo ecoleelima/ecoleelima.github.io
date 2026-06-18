@@ -742,6 +742,41 @@ header {
     transform: rotate(180deg);
 }
 
+#parrainage {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff8f8;
+}
+
+#parrainage h2 {
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.parrainage-box {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.parrainage-box ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.btn-parrainage {
+    display: inline-block;
+    background: #d32f2f;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 /* ==========================================================================
    7. SECTION CONTACT & FORMULAIRE
    ========================================================================== */
