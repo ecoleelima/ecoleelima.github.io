@@ -1062,6 +1062,76 @@ header {
     color: white;
 }
 
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+.container{
+    max-width:800px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.photo{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #f4a300;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#0d47a1;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#f4a300;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    text-align:left;
+}
+
+.btn-whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:scale(1.05);
+}
+
+.retour{
+    display:inline-block;
+    margin-top:20px;
+    color:#0d47a1;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.retour:hover{
+    text-decoration:underline;
+}
 
 /* ==========================================================================
    STYLE COMPLET DE L'ESPACE PAIEMENT (MVOLA / ORANGE MONEY)
