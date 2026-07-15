@@ -1308,5 +1308,25 @@ p{
     }
 }
     
+.facebook-btn a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #1877f2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
 
+.facebook-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook-btn a:hover {
+    opacity: 0.8;
+}
     
