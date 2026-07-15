@@ -1329,4 +1329,75 @@ p{
 .facebook-btn a:hover {
     opacity: 0.8;
 }
+
+.contact-section {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h1 {
+    font-size: 45px;
+    color: #e9a400;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ligne {
+    width: 20px;
+    height: 5px;
+    background: #e9a400;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    margin-top: 50px;
+    font-size: 35px;
+    color: #12346b;
+}
+
+.contact-box {
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-item span {
+    font-size: 35px;
+}
+
+.contact-item h3 {
+    margin: 0;
+    color: #12346b;
+    font-size: 20px;
+}
+
+.contact-item p {
+    margin-top: 5px;
+    color: #555;
+    font-size: 17px;
+}
+
+.facebook-btn {
+    display: inline-block;
+    background: #1877f2;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
     
