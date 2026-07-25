@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Localisation - École ELIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles pour la carte de localisation Google Maps */
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 15px;
+            border: 1px solid #ddd;
+        }
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Styles pour le bouton Facebook officiel */
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #1877f2; /* Bleu officiel Facebook */
+            color: white !important;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .btn-facebook:hover {
+            background-color: #145dbf;
+            transform: scale(1.02);
+        }
+        /* Séparateur visuel */
+        .separateur {
+            text-align: center;
+            margin: 25px 0;
+            position: relative;
+        }
+        .separateur::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ddd;
+            z-index: 1;
+        }
+        .separateur span {
+            background: #fff;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text"><h1>ÉCOLE ELIMA</h1><span>Contact & Accès</span></div>
+        <button class="menu-burger" id="burgerMenu"><span></span><span></span><span></span></button>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="nav-lateral" id="sideNav">
+        <button class="btn-fermer" id="closeNav">&times;</button>
+        <ul>
+            <li><a href="index.html">Accueil & Inscription</a></li>
+            <li><a href="pedagogie.html">Pédagogie & Vidéos Fêtes 🎬</a></li>
+            <li><a href="pratique.html">Infos Pratiques & Tarifs</a></li>
+            <li><a href="espace-numerique.html">Espace Numérique (ENT)</a></li>
+            <li><a href="dons.html">Faire un Don</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://facebook.com" target="_blank" style="color: #1877f2;">Page Facebook Officielle 🔵</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- BLOC 1 : CARTE DE LOCALISATION REELLE DE L'ÉCOLE -->
+        <div class="card">
+            <h2>📍 Notre Emplacement / Carte de Localisation</h2>
+            <p>Retrouvez l'accès aux infrastructures de l'École Privée ELIMA. La carte ci-dessous affiche l'emplacement précis de notre établissement enregistré sur Google Maps.</p>
+            
+            <div class="map-container">
+                <!-- Intégration de l'iframe avec l'adresse exacte convertie depuis votre lien maps.app.goo.gl -->
+                <iframe class="map-iframe" src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- BLOC 2 : MOYENS DE COMMUNICATION INTERACTIFS -->
+        <div class="card">
+            <h2>✉️ Nous écrire ou nous suivre</h2>
+            <p>Le secrétariat et l'administration restent à votre écoute pour toute demande d'information sur les inscriptions, écolages ou rendez-vous pédagogiques.</p>
+            
+            <form action="https://formspree.io" method="POST">
+                <div class="form-group">
+                    <label for="nom">Nom complet :</label>
+                    <input type="text" id="nom" name="Nom complet" required placeholder="Votre nom et prénom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Numéro ou Adresse Email de contact :</label>
+                    <input type="text" id="email" name="Contact Parent" required placeholder="Ex: 0326249007 ou parents@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre Message :</label>
+                    <textarea id="message" name="Message" rows="4" required placeholder="Tapez votre question ici..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">✉️ Envoyer un Message Administratif</button>
+            </form>
+
+            <div class="separateur"><span>OU REJOINDRE NOTRE COMMUNAUTÉ</span></div>
+
+            <a href="https://facebook.com" class="btn-facebook" target="_blank">
+                🔵 Suivre l'École Privée ELIMA sur Facebook
+            </a>
+        </div>
+    </main>
+
+    <footer><p>© 2026 École Privée ELIMA. Tous droits réservés.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

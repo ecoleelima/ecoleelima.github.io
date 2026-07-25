@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Scolarité - École ELIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-header { background-color: #34495e; color: white; padding: 15px; border-radius: 6px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .search-container { border: 2px solid #2ecc71; padding: 20px; background-color: white; border-radius: 8px; margin-bottom: 25px; }
+        .search-box-flex { display: flex; gap: 10px; margin-top: 10px; }
+        .bulletin-box { display: none; margin-top: 20px; }
+        .bulletin-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        .bulletin-table th, .bulletin-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        .bulletin-table th { background-color: #34495e; color: white; }
+        .bulletin-table td:nth-child(2), .bulletin-table td:nth-child(3), .bulletin-table td:nth-child(4) { text-align: center; color: #555; }
+        .bulletin-table td:last-child { font-weight: bold; text-align: right; color: #2e7d32; font-size: 15px; }
+        .error-notif { display: none; background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 6px; margin-top: 15px; font-weight: bold; border: 1px solid #f5c6cb; }
+        .admin-link { display: block; text-align: center; margin-top: 30px; font-size: 13px; color: #7f8c8d; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text"><h1>ÉCOLE ELIMA</h1><span>Espace Scolarité</span></div>
+        <button class="menu-burger" id="burgerMenu"><span></span><span></span><span></span></button>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="nav-lateral" id="sideNav">
+        <button class="btn-fermer" id="closeNav">&times;</button>
+        <ul>
+            <li><a href="index.html">Accueil & Inscription</a></li>
+            <li><a href="pedagogie.html">Pédagogie & Équipe</a></li>
+            <li><a href="pratique.html">Infos Pratiques & Tarifs</a></li>
+            <li><a href="espace-numerique.html">Espace Numérique (ENT)</a></li>
+            <li><a href="dons.html">Faire un Don</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="welcome-header">
+            <div>
+                <h2 style="color: white; border: none; margin: 0; padding: 0;">Espace Parent : <span id="nomParentAffichage"></span> 👋</h2>
+                <p style="margin: 5px 0 0 0; font-size: 13px; color: #bdc3c7;">École Privée ELIMA</p>
+            </div>
+            <button id="btnDeconnexion" class="tab-btn" style="background-color: #e74c3c; color: white; border: none; cursor: pointer;">Déconnexion</button>
+        </div>
+
+        <div class="search-container">
+            <h3 style="margin: 0; color: #2c3e50;">🔍 Visualiser le relevé de notes de l'élève :</h3>
+            <form id="searchForm">
+                <div class="search-box-flex">
+                    <input type="text" id="searchName" required placeholder="Entrez le nom complet de l'élève (Ex: RAKOTO JEAN)">
+                    <button type="submit" class="btn-submit" style="width: auto; background-color: #2ecc71; padding: 0 25px;">Rechercher</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="searchError" class="error-notif">❌ Élève introuvable. Écrivez le nom complet en MAJUSCULES.</div>
+
+        <!-- AFFICHAGE RELEVÉ DE NOTES PARENT -->
+        <div id="bulletinResult" class="card bulletin-box">
+            <div style="background-color: #34495e; color: white; padding: 15px; border-radius: 6px 6px 0 0; margin: -30px -30px 20px -30px;">
+                <h3 style="color: white; margin: 0; font-size: 17px;">📄 BULLETIN TRIMESTRIEL DE SCOLARITÉ</h3>
+                <p style="margin: 5px 0 0 0; font-size: 14px; color: #bdc3c7;">Élève : <span id="resStudentName" style="font-weight: bold; color: white;"></span> • Classe : <span id="resStudentClass" style="color: #2ecc71; font-weight: bold;"></span></p>
+            </div>
+
+            <table class="bulletin-table">
+                <thead>
+                    <tr>
+                        <th>Matières Obligatoires</th>
+                        <th>Int. 1</th>
+                        <th>Int. 2</th>
+                        <th>Examen</th>
+                        <th style="text-align: right;">Moyenne Finale</th>
+                    </tr>
+                </thead>
+                <tbody id="bulletinBody">
+                    <!-- Généré dynamiquement en JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Le bouton d'accès sécurisé -->
+        <div style="text-align: center; margin-top: 30px;">
+            <span onclick="ouvrirZoneAdmin()" class="admin-link" style="cursor: pointer; color: #7f8c8d; text-decoration: underline; font-size: 13px;">
+                ⚙️ Accès Sécurisé Direction : Gérer la base élèves
+            </span>
+        </div>
+    </main>
+
+    <footer><p>© 2026 École Privée ELIMA. Tous droits réservés.</p></footer>
+    <script src="script.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("ent_session_active") !== "oui") window.location.href = "espace-numerique.html";
+            document.getElementById("nomParentAffichage").innerText = localStorage.getItem("ent_parent_name");
+        });
+
+        document.getElementById("btnDeconnexion").addEventListener("click", function() {
+            localStorage.removeItem("ent_session_active");
+            window.location.href = "espace-numerique.html";
+        });
+
+        // SCRIPT DE VERROUILLAGE AVEC VOTRE NOUVEAU CODE SECRET
+        function abrirZoneAdmin() { // Note: Correction mineure de l'appel pour correspondre à ouvrirZoneAdmin
+            ouvrirZoneAdmin();
+        }
+
+        function ouvrirZoneAdmin() {
+            const codeSaisi = prompt("🔒 Sécurité École ELIMA :\nVeuillez entrer le Code Secret Administrateur pour accéder à la direction :");
+            
+            // VOTRE NOUVEAU CODE INTERNE MODIFIÉ
+            const codeCorrect = "BENEDIT100598"; 
+
+            if (codeSaisi === codeCorrect) {
+                localStorage.setItem("ent_admin_autorise", "oui");
+                window.location.href = "ent-admin.html";
+            } else if (codeSaisi !== null) {
+                alert("❌ Code Secret Incorrect ! Accès strictement refusé.");
+            }
+        }
+
+        const matieresLabels = {
+            math: "📐 Mathématiques",
+            physique: "🧪 Physique-Chimie",
+            svt: "🌱 SVT (Sciences de la Vie)",
+            histoire: "🌍 Histoire-Géographie",
+            anglais: "🇬🇧 Anglais",
+            malagasy: "🇲🇬 Malagasy",
+            francais: "🇫🇷 Français",
+            eps: "🏃 EPS (Sport)"
+        };
+
+        document.getElementById("searchForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const searchName = document.getElementById("searchName").value.trim().toUpperCase();
+            const errorBox = document.getElementById("searchError");
+            const resultBox = document.getElementById("bulletinResult");
+            const tbody = document.getElementById("bulletinBody");
+
+            const dbData = localStorage.getItem("elima_students_db");
+            const studentsDb = dbData ? JSON.parse(dbData) : {};
+
+            errorBox.style.display = "none";
+            resultBox.style.display = "none";
+            tbody.innerHTML = "";
+
+            if (studentsDb[searchName]) {
+                const student = studentsDb[searchName];
+                document.getElementById("resStudentName").innerText = searchName;
+                document.getElementById("resStudentClass").innerText = student.classe;
+
+                Object.keys(matieresLabels).forEach(key => {
+                    const n = student.notes[key];
+                    const i1 = parseFloat(n.i1) || 0;
+                    const i2 = parseFloat(n.i2) || 0;
+                    const ex = parseFloat(n.ex) || 0;
+                    
+                    const moyenne = ((i1 + i2 + ex) / 3).toFixed(2);
+
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `
+                        <td><strong>${matieresLabels[key]}</strong></td>
+                        <td>${n.i1}/20</td>
+                        <td>${n.i2}/20</td>
+                        <td>${n.ex}/20</td>
+                        <td>${moyenne} / 20</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+                resultBox.style.display = "block";
+            } else {
+                errorBox.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>École Privée ELIMA | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles pour sublimer la photo et le logo d'accueil */
+        .logo-accueil-box {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .logo-accueil {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+        .hero-image-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text"><h1>ÉCOLE ELIMA</h1><span>Excellence & Avenir</span></div>
+        <button class="menu-burger" id="burgerMenu"><span></span><span></span><span></span></button>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="nav-lateral" id="sideNav">
+        <button class="btn-fermer" id="closeNav">&times;</button>
+        <ul>
+            <li><a href="index.html">Accueil & Inscription</a></li>
+            <li><a href="pedagogie.html">Pédagogie & Vidéos Fêtes 🎬</a></li>
+            <li><a href="pratique.html">Infos Pratiques & Tarifs</a></li>
+            <li><a href="espace-numerique.html">Espace Numérique (ENT)</a></li>
+            <li><a href="dons.html">Faire un Don</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Section Bannière de Bienvenue -->
+        <div class="card" style="text-align: center; background: #34495e; color: white; margin-bottom: 20px;">
+            <!-- Intégration de votre Logo d'École -->
+            <div class="logo-accueil-box">
+                <img src="directeur.png" alt="Logo de l'École Privée ELIMA" class="logo-accueil">
+            </div>
+            <h2 style="color: white; border-color: #2ecc71; margin-top: 0;">Bienvenue à l'École Privée ELIMA</h2>
+            <p style="margin-bottom: 0;">Un établissement d'enseignement d'excellence à Madagascar, de la Maternelle jusqu'au Lycée.</p>
+        </div>
+
+        <!-- Emplacement de votre Photo d'Accueil -->
+        <div class="hero-image-container">
+            <img src="accueil-elima.jpg" alt="Les élèves de l'École Privée ELIMA" class="hero-image">
+        </div>
+
+        <!-- Section Formulaire d'Inscription relié à votre messagerie -->
+        <div class="card">
+            <h2>Formulaire d'Inscription</h2>
+            <form action="https://formspree.io" method="POST">
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="nom_eleve">Nom de l'élève :</label>
+                        <input type="text" id="nom_eleve" name="Nom de l'élève" required placeholder="Ex: Rakoto Jean">
+                    </div>
+                    <div class="form-group">
+                        <label for="niveau">Niveau demandé :</label>
+                        <select id="niveau" name="Niveau Scolaire">
+                            <option value="Maternelle">Maternelle</option>
+                            <option value="Primaire">Primaire</option>
+                            <option value="Collège">Collège</option>
+                            <option value="Lycée">Lycée</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nom_parent">Nom du Parent / Tuteur :</label>
+                    <input type="text" id="nom_parent" name="Nom du Parent" required placeholder="Ex: Rakoto Pierre">
+                </div>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label for="telephone">Numéro de téléphone :</label>
+                        <input type="text" id="telephone" name="Téléphone" required placeholder="Ex: +261 32 62 490 07">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email de contact :</label>
+                        <input type="email" id="email" name="Email" required placeholder="parents@email.com">
+                    </div>
+                </div>
+                
+                <!-- Sécurité anti-spam invisible pour les robots -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="btn-submit">Envoyer le dossier d'inscription</button>
+            </form>
+        </div>
+    </main>
+
+    <footer><p>© 2026 École Privée ELIMA. Tous droits réservés.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pédagogie et Niveaux - École ELIMA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles pour centrer la photo du directeur */
+        .director-img-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .director-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2ecc71;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* Styles pour rendre les blocs de classes cliquables et interactifs */
+        .class-link-card {
+            display: block;
+            text-decoration: none;
+            color: #2c3e50;
+            background: #ffffff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .class-link-card:hover {
+            transform: translateX(5px);
+            background-color: #f8f9fa;
+            color: #2c3e50;
+        }
+        .class-link-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .class-link-card .btn-voir {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 13px;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text"><h1>ÉCOLE ELIMA</h1><span>Pédagogie</span></div>
+        <button class="menu-burger" id="burgerMenu"><span></span><span></span><span></span></button>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <nav class="nav-lateral" id="sideNav">
+        <button class="btn-fermer" id="closeNav">&times;</button>
+        <ul>
+            <li><a href="index.html">Accueil & Inscription</a></li>
+            <li><a href="pedagogie.html">Pédagogie & Vidéos Fêtes 🎬</a></li>
+            <li><a href="pratique.html">Infos Pratiques & Tarifs</a></li>
+            <li><a href="espace-numerique.html">Espace Numérique (ENT)</a></li>
+            <li><a href="dons.html">Faire un Don</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Section Mot du Directeur avec Photo centrée en haut -->
+        <div class="card" style="text-align: center;">
+            <div class="director-img-container">
+                <img src="photo-directeur.jpg" alt="Directeur de l'École ELIMA" class="director-img">
+            </div>
+            <h2>Le mot du Directeur</h2>
+            <p style="font-size: 16px; line-height: 1.6; text-align: justify; max-width: 750px; margin: 0 auto;">
+                "Bienvenue à l'École Privée ELIMA. Notre mission est d'accompagner chaque enfant sur le chemin de la réussite et de l'excellence éducative à Madagascar. Grâce à une équipe pédagogique dévouée et des infrastructures adaptées, nous veillons à offrir à nos élèves les outils intellectuels et moraux nécessaires pour construire leur avenir avec sérénité et loyauté."
+            </p>
+        </div>
+
+        <!-- Section Nos Niveaux d'Enseignement séparés et cliquables -->
+        <div class="card">
+            <h2>Nos Niveaux d'Enseignement</h2>
+            <p style="color: #7f8c8d; margin-bottom: 20px;">Cliquez sur la classe de votre choix pour découvrir les programmes, les matières enseignées et nos objectifs :</p>
+            
+            <!-- Lien Maternelle -->
+            <a href="classe-maternelle.html" class="class-link-card" style="border-left-color: #ff9800;">
+                <h3>👶 Section Maternelle</h3>
+                <p style="margin: 0; font-size: 14px; color: #57606f;">Éveil, motricité, apprentissage des bases du langage et socialisation pour les plus petits.</p>
+                <span class="btn-voir">Découvrir la Maternelle →</span>
+            </a>
+
+            <!-- Lien Primaire -->
+            <a href="classe-primaire.html" class="class-link-card" style="border-left-color: #2ecc71;">
+                <h3>🎒 Section Primaire (T1 à T5)</h3>
+                <p style="margin: 0; font-size: 14px; color: #57606f;">Acquisition fondamentale de la lecture, de l'écriture et du calcul. Préparation rigoureuse au CEPE.</p>
+                <span class="btn-voir">Découvrir le Primaire →</span>
+            </a>
+
+            <!-- Lien Collège / Secondaire -->
+            <a href="classe-college.html" class="class-link-card" style="border-left-color: #3498db;">
+                <h3>📚 Section Secondaire / Collège (6ème à 3ème)</h3>
+                <p style="margin: 0; font-size: 14px; color: #57606f;">Approfondissement des matières scientifiques et littéraires. Préparation intensive à l'examen du BEPC.</p>
+                <span class="btn-voir">Découvrir le Collège →</span>
+            </a>
+
+            <!-- Lien Lycée -->
+            <a href="classe-lycee.html" class="class-link-card" style="border-left-color: #9b59b6;">
+                <h3>🏫 Section Lycée (Seconde à Terminale)</h3>
+                <p style="margin: 0; font-size: 14px; color: #57606f;">Spécialisation dans les filières d'excellence (Scientifiques et Littéraires). Préparation au Baccalauréat.</p>
+                <span class="btn-voir">Découvrir le Lycée →</span>
+            </a>
+        </div>
+
+        <!-- Section Vidéo Souvenir de fin de page -->
+        <div class="card">
+            <h2>🎬 Vidéo souvenir : Fête de l'École ELIMA 🎉</h2>
+            <div style="width: 100%; border-radius: 8px; overflow: hidden; background-color: #000;">
+                <video controls width="100%" preload="none">
+                    <source src="videos/fete-ecole.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>© 2026 École Privée ELIMA. Tous droits réservés.</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

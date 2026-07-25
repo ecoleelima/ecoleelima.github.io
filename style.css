@@ -1,0 +1,300 @@
+/* Style Global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f6fa;
+    color: #2c3e50;
+}
+
+/* En-tête */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #bdc3c7;
+    display: block;
+}
+
+/* Menu Burger (3 traits) */
+.menu-burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+
+.menu-burger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menu Latéral Coulissant */
+.nav-lateral {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 260px;
+    height: 100%;
+    background-color: #2c3e50;
+    z-index: 2000;
+    padding: 40px 20px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    transition: right 0.4s ease;
+}
+
+.nav-lateral.open {
+    right: 0;
+}
+
+.btn-fermer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.nav-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.nav-lateral ul li {
+    margin-bottom: 15px;
+}
+
+.nav-lateral ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: 0.2s;
+}
+
+.nav-lateral ul li a:hover {
+    color: #2ecc71;
+    padding-left: 15px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1500;
+    display: none;
+}
+
+.menu-overlay.show {
+    display: block;
+}
+
+/* Layout Composants */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #2ecc71;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 20px;
+}
+
+/* Grilles Responsive */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Tableaux pour Tarifs et Calendrier */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Formulaires */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+/* Spécifique Dons */
+.bank-card {
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+}
+
+.bank-row {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #f1f2f6;
+}
+
+.bank-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.bank-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.iban-box {
+    background-color: #fff9e6;
+    border: 1px solid #f39c12;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 17px;
+    color: #d35400;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    display: block;
+    text-align: center;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Galerie & Actualités */
+.news-item, .gallery-item {
+    background: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+    font-size: 14px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 60px;
+}
