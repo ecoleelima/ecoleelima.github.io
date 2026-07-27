@@ -613,3 +613,237 @@ footer {
 .contact-link-light:hover {
     color: #ffb8b8;
 }
+.section-subtitle {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Grille de cartes */
+.donation-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style de chaque carte d'article */
+.donation-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.donation-card:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Grandes cartes pleines lignes */
+.full-width-card {
+    margin-top: 15px;
+}
+.highlight-card {
+    border-left: 4px solid #e67e22;
+    background-color: #fffaf5;
+}
+
+/* Alignement Checkbox */
+.card-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.item-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.card-label {
+    font-size: 1rem;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+/* Tarifs et Quantités */
+.unit-prices {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    padding-left: 28px;
+}
+.qty-selector {
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+.qty-selector input {
+    width: 60px;
+    padding: 4px 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    text-align: center;
+}
+.max-qty {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+.card-description {
+    padding-left: 28px;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0 0 0;
+    line-height: 1.4;
+}
+
+/* Barre de calcul finale */
+/* Nouvelle barre de résumé classique non bloquée en bas */
+ /* Barre de résumé finale ultra-stylée */
+.donation-summary-bar-static {
+    background: #111827 !important; /* Fond noir/sombre premium moderne */
+    color: #ffffff !important;
+    padding: 20px !important;
+    border-radius: 16px !important;
+    margin: 30px auto 15px auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important; /* Aligne les éléments l'un sous l'autre sur mobile */
+    align-items: center !important;
+    gap: 15px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid #1f2937 !important;
+}
+
+/* Zone du texte et des montants */
+.total-display {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.total-title {
+    font-size: 0.85rem !important;
+    color: #9ca3af !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+}
+
+.total-amounts {
+    font-size: 1.7rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px !important;
+    display: inline-block !important;
+}
+
+/* Couleurs des devises */
+#total-euro { 
+    color: #38bdf8 !important; /* Bleu ciel lumineux */
+} 
+#total-ariary { 
+    color: #4ade80 !important; /* Vert émeraude lumineux */
+}
+
+/* Bouton WhatsApp au style moderne (Bords arrondis, icône centrée, effet relief) */
+.btn-whatsapp-large {
+    background-color: #25D366 !important; /* Couleur officielle WhatsApp */
+    color: #ffffff !important;
+    border: none !important;
+    padding: 14px 28px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important; /* Arrondi parfait style pilule */
+    cursor: pointer !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
+    text-transform: none !important;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+/* Petit effet au clic sur mobile */
+.btn-whatsapp-large:active {
+    background-color: #1ebd56 !important;
+    transform: scale(0.98) !important;
+}
+
+
+/* Bouton WhatsApp géant et immanquable */
+.btn-whatsapp-large {
+    background-color: #25D366 !important;
+    color: white !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    width: 100%;
+    max-width: 400px;
+    display: inline-block !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+    transition: transform 0.2s, background-color 0.2s;
+}
+.btn-whatsapp-large:hover {
+    background-color: #1ebd56 !important;
+}
+.btn-whatsapp-large:active {
+    transform: scale(0.98);
+}
+
+
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.total-title {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    display: block;
+}
+.total-amounts {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3498db;
+}
+#total-ariary {
+    color: #2ecc71;
+}
+
+/* Bouton WhatsApp */
+.btn-whatsapp-submit {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+.btn-whatsapp-submit:hover {
+    background-color: #1ebd56;
+}
+
+@media (max-width: 650px) {
+    .donation-summary-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
