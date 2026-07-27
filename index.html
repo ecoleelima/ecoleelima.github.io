@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -72,6 +73,80 @@
             <img src="accueil-elima.jpg" alt="Les élèves de l'École Privée ELIMA" class="hero-image">
         </div>
 
+  
+    <!-- Bloc Donateur Attractif avec Sécurité -->
+<div class="donator-wrapper">
+    <div class="donator-card-header">
+        <div class="pulse-badge">🔥 Urgent</div>
+        <h2>🤝 ESPACE POUR LES DONATEURS</h2>
+        <p>Aidez notre établissement à grandir et soutenez nos élèves.</p>
+        
+        <!-- Message d'information préalable -->
+        <p class="code-instruction">
+            🔑 <strong>Note :</strong> Cette zone est sécurisée. Veuillez 
+            <a href="https://wa.me" target="_blank" class="contact-link-light">contacter l'école</a> 
+            pour obtenir votre code d'accès personnel.
+        </p>
+        
+        <!-- Formulaire de code secret -->
+        <div class="security-form" id="crypto-form">
+            <input type="password" id="secret-code-input" placeholder="Entrez le code d'accès..." aria-label="Code secret">
+            <button onclick="checkDonatorCode()" class="btn-unlock">🔓 Voir les Besoins</button>
+        </div>
+        
+        <!-- Message d'erreur et contact -->
+        <div id="error-message" class="contact-hint" style="display: none;">
+            ❌ Code incorrect. Pour obtenir votre code d'accès, veuillez 
+            <a href="https://wa.me" target="_blank" class="contact-link">nous contacter sur WhatsApp</a> 
+            ou par <a href="mailto:contact@://ecole.com" class="contact-link">Email</a>.
+        </div>
+    </div>
+
+    <!-- Zone cachée : s'affiche uniquement si le code est bon -->
+    <div class="donator-hidden-content" id="secure-content" style="display: none;">
+        <section class="needs-container">
+            
+            <!-- Section École -->
+            <div class="needs-block">
+                <h3 class="title-school">🏫 BESOIN DE L'ÉCOLE</h3>
+                <ul class="needs-list">
+                    <li class="list-item">
+                        <span class="item-name"><strong>Porte métallique</strong> (10 pièces)</span>
+                        <span class="price-badge">1 400 € / 7 000 000 Ariary</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name"><strong>Ordinateur de l'administration</strong> (1 unité)</span>
+                        <span class="price-badge">200 € / 1 000 000 Ariary</span>
+                    </li>
+                    <li class="list-item">
+                        <span class="item-name"><strong>Ciment pour crépissage</strong> (100 pièces)</span>
+                        <span class="price-badge">800 € / 4 000 000 Ariary</span>
+                    </li>
+                    <li class="item-text">
+                        <strong>📌 Devenir mpanohana (soutien) au voyage scolaire :</strong> 
+                        Chaque année, l'école organise un voyage vers une destination au choix (Toliara, Mahajanga ou Antananarivo).
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section Élèves -->
+            <div class="needs-block">
+                <h3 class="title-students">🎓 BESOIN DES ÉLÈVES</h3>
+                <div class="alert-box">
+                    <strong>Soutenir les élèves en difficulté :</strong> 
+                    Aide pour le paiement de l'écolage et la fourniture de kits scolaires. 
+                    Chaque année, plusieurs élèves font face à des difficultés financières et ont besoin de votre soutien.
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+
+
+
+        
         <!-- Section Formulaire d'Inscription relié à votre messagerie -->
         <div class="card">
             <h2>Formulaire d'Inscription</h2>
