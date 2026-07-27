@@ -147,5 +147,37 @@ function sendDonationToWhatsApp() {
     message += `\n💰 *TOTAL ESTIMÉ* : ${totalEuro} € / ${totalAriary.toLocaleString()} Ariary\n\n`;
     message += "Veuillez me recontacter pour finaliser les modalités de l'aide. Merci !";
 
-    window.open(`https://wa.me{monNumeroWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/${monNumeroWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("inscriptionForm");
+
+    if (form) {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const data = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: data,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                const notification = document.getElementById("notification");
+                notification.classList.add("show");
+
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                }, 4000);
+
+                form.reset();
+            } else {
+                alert("Une erreur est survenue lors de l'envoi.");
+            }
+        });
+    }
+});
