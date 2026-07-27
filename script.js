@@ -147,7 +147,7 @@ function sendDonationToWhatsApp() {
     message += `\n💰 *TOTAL ESTIMÉ* : ${totalEuro} € / ${totalAriary.toLocaleString()} Ariary\n\n`;
     message += "Veuillez me recontacter pour finaliser les modalités de l'aide. Merci !";
 
-    window.open(`https://wa.me/${monNumeroWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me{monNumeroWhatsApp}?text=${encodeURIComponent(message)}`, '_blank');
 }
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("inscriptionForm");
