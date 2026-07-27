@@ -298,3 +298,318 @@ footer {
     color: white;
     margin-top: 60px;
 }
+/* Conteneur principal */
+.needs-container {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Blocs de sections */
+.needs-block {
+    margin-bottom: 35px;
+}
+.needs-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Titres */
+.title-school, .title-students {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.title-school {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+}
+.title-students {
+    color: #2c3e50;
+    border-bottom: 3px solid #e67e22;
+}
+
+/* Liste des éléments */
+.needs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Lignes de la liste (Flexbox pour aligner le texte à gauche et le prix à droite) */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+@media (max-width: 600px) {
+    .list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* Badges des prix */
+.price-badge {
+    background-color: #e1f5fe;
+    color: #0288d1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Texte descriptif sous la liste */
+.item-text {
+    padding-top: 15px;
+    line-height: 1.6;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Encadré d'alerte pour les élèves */
+.alert-box {
+    background-color: #fff3e0;
+    border-left: 5px solid #e67e22;
+    padding: 18px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.6;
+    color: #c0392b;
+    font-size: 0.95rem;
+}
+/* Style du bouton d'ouverture (Espace Donateurs) */
+.donator-space {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Intitulé cliquable */
+.donator-title {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* Cache la flèche HTML par défaut */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+/* Cache la flèche par défaut sur Safari */
+.donator-title::-webkit-details-marker {
+    display: none;
+}
+
+/* Icône de flèche animée */
+.donator-space .toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Animation de la flèche quand c'est ouvert */
+.donator-space[open] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Contenu intérieur quand il est affiché */
+.donator-content {
+    background-color: #f8fafc;
+    padding: 10px;
+}
+
+/* --- REPRISE DE VOS ANCIENS STYLES AJUSTÉS --- */
+.needs-container {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 20px;
+}
+.needs-block { margin-bottom: 30px; }
+.needs-block:last-child { margin-bottom: 0; }
+.title-school { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 5px; font-size: 1.25rem; }
+.title-students { color: #2c3e50; border-bottom: 3px solid #e67e22; padding-bottom: 5px; font-size: 1.25rem; }
+.needs-list { list-style: none; padding: 0; margin: 0; }
+.list-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #333; }
+@media (max-width: 600px) { .list-item { flex-direction: column; align-items: flex-start; gap: 8px; } }
+.price-badge { background-color: #e1f5fe; color: #0288d1; padding: 6px 12px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; white-space: nowrap; }
+.item-text { padding-top: 15px; line-height: 1.6; color: #4a5568; }
+.alert-box { background-color: #fff3e0; border-left: 5px solid #e67e22; padding: 15px; border-radius: 0 6px 6px 0; line-height: 1.6; color: #c0392b; }
+
+/* Conteneur principal ultra-visible */
+.donator-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #ffffff;
+    border: 2px solid #e67e22; /* Bordure orange dynamique */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.15); /* Ombre colorée */
+}
+
+/* En-tête accrocheur */
+.donator-card-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+/* Modification pour rendre le titre parfaitement visible sur fond sombre */
+.donator-card-header h2 {
+    color: #ffffff !important; /* Force la couleur blanche */
+    font-size: 1.6rem;
+    font-weight: 800; /* Rend le texte plus épais */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour détacher le texte */
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+}
+
+.donator-card-header p {
+    color: #bdc3c7;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Badge clignotant "Urgent" */
+.pulse-badge {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    display: inline-block;
+    animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+/* Formulaire de saisie */
+.security-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.security-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #34495e;
+    border-radius: 8px;
+    background-color: #34495e;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.security-form input:focus {
+    border-color: #e67e22;
+}
+.btn-unlock {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-unlock:hover {
+    background-color: #d35400;
+}
+.btn-unlock:active {
+    transform: scale(0.98);
+}
+
+/* Message d'erreur et liens de contact */
+.contact-hint {
+    margin-top: 15px;
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e74c3c;
+    font-size: 0.95rem;
+    color: #f19086;
+    line-height: 1.4;
+}
+.contact-link {
+    color: #e67e22;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.contact-link:hover {
+    color: #f39c12;
+}
+
+/* Structure du contenu une fois déverrouillé */
+.donator-hidden-content {
+    background-color: #f8fafc;
+    animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- DESIGN DES TABLEAUX ET TEXTES INTERNES --- */
+.needs-container { padding: 30px; background-color: #ffffff; }
+.needs-block { margin-bottom: 30px; }
+.needs-block:last-child { margin-bottom: 0; }
+.title-school { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 8px; font-size: 1.3rem; margin-top: 0; }
+.title-students { color: #2c3e50; border-bottom: 3px solid #e67e22; padding-bottom: 8px; font-size: 1.3rem; margin-top: 0; }
+.needs-list { list-style: none; padding: 0; margin: 0; }
+.list-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #f0f0f0; color: #2c3e50; }
+@media (max-width: 600px) {
+    .security-form { flex-direction: column; }
+    .list-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+.price-badge { background-color: #e1f5fe; color: #0288d1; padding: 6px 14px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
+.item-text { padding-top: 15px; line-height: 1.6; color: #555; }
+.alert-box { background-color: #fff3e0; border-left: 5px solid #e67e22; padding: 18px; border-radius: 0 8px 8px 0; line-height: 1.6; color: #c0392b; }
+
+/* Style pour l'instruction de code obligatoire */
+.code-instruction {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem !important;
+    color: #e2e8f0 !important;
+    max-width: 500px;
+    margin: 0 auto 20px auto !important;
+    line-height: 1.4;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* Lien de contact plus clair pour le fond sombre */
+.contact-link-light {
+    color: #ff9f43;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.contact-link-light:hover {
+    color: #ffb8b8;
+}
