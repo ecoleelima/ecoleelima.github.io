@@ -74,7 +74,7 @@
         </div>
 
   
-    <!-- Bloc Donateur Attractif avec Sécurité -->
+  <!-- Bloc Donateur Attractif avec Sécurité et Catalogue WhatsApp -->
 <div class="donator-wrapper">
     <div class="donator-card-header">
         <div class="pulse-badge">🔥 Urgent</div>
@@ -102,42 +102,169 @@
         </div>
     </div>
 
-    <!-- Zone cachée : s'affiche uniquement si le code est bon -->
+    <!-- ZONE CACHÉE : S'affiche uniquement si le code est correct -->
     <div class="donator-hidden-content" id="secure-content" style="display: none;">
         <section class="needs-container">
             
             <!-- Section École -->
             <div class="needs-block">
                 <h3 class="title-school">🏫 BESOIN DE L'ÉCOLE</h3>
-                <ul class="needs-list">
-                    <li class="list-item">
-                        <span class="item-name"><strong>Porte métallique</strong> (10 pièces)</span>
-                        <span class="price-badge">1 400 € / 7 000 000 Ariary</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="item-name"><strong>Ordinateur de l'administration</strong> (1 unité)</span>
-                        <span class="price-badge">200 € / 1 000 000 Ariary</span>
-                    </li>
-                    <li class="list-item">
-                        <span class="item-name"><strong>Ciment pour crépissage</strong> (100 pièces)</span>
-                        <span class="price-badge">800 € / 4 000 000 Ariary</span>
-                    </li>
-                    <li class="item-text">
-                        <strong>📌 Devenir mpanohana (soutien) au voyage scolaire :</strong> 
-                        Chaque année, l'école organise un voyage vers une destination au choix (Toliara, Mahajanga ou Antananarivo).
-                    </li>
-                </ul>
+                <p class="section-subtitle">Sélectionnez les articles et les quantités que vous souhaitez parrainer :</p>
+                
+                <div class="donation-cards-grid">
+                    <!-- Porte métallique -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-porte" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-porte" class="card-label"><strong>Porte métallique</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 140 € / 700 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Quantité :</label>
+                                <input type="number" id="qty-porte" value="1" min="1" max="10" oninput="calculateTotal()">
+                                <span class="max-qty">/ 10 max</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ordinateur -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-ordi" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-ordi" class="card-label"><strong>Ordinateur Administration</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 200 € / 1 000 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Quantité :</label>
+                                <input type="number" id="qty-ordi" value="1" min="1" max="1" oninput="calculateTotal()">
+                                <span class="max-qty">/ 1 max</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ciment -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-ciment" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-ciment" class="card-label"><strong>Sac de Ciment</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 8 € / 40 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Quantité :</label>
+                                <input type="number" id="qty-ciment" value="1" min="1" max="100" oninput="calculateTotal()">
+                                <span class="max-qty">/ 100 max</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table banc -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-table" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-table" class="card-label"><strong>Table banc</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 50 € / 250 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Quantité :</label>
+                                <input type="number" id="qty-table" value="1" min="1" oninput="calculateTotal()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Peinture -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-peinture" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-peinture" class="card-label"><strong>Peinture (Pot)</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 40 € / 180 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Quantité :</label>
+                                <input type="number" id="qty-peinture" value="1" min="1" oninput="calculateTotal()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option Voyage Scolaire -->
+                <div class="donation-card full-width-card">
+                    <div class="card-checkbox-wrapper">
+                        <input type="checkbox" id="item-voyage" class="item-checkbox" onchange="calculateTotal()">
+                        <label for="item-voyage" class="card-label"><strong>📌 Devenir Mpanohana (Soutien) au Voyage Scolaire</strong></label>
+                    </div>
+                    <p class="card-description">Soutien annuel pour le voyage de l'école (Destinations : Toliara, Mahajanga ou Antananarivo).</p>
+                </div>
             </div>
 
             <!-- Section Élèves -->
             <div class="needs-block">
                 <h3 class="title-students">🎓 BESOIN DES ÉLÈVES</h3>
-                <div class="alert-box">
-                    <strong>Soutenir les élèves en difficulté :</strong> 
-                    Aide pour le paiement de l'écolage et la fourniture de kits scolaires. 
-                    Chaque année, plusieurs élèves font face à des difficultés financières et ont besoin de votre soutien.
+                <p class="section-subtitle">Soutenez directement les élèves en difficulté financière :</p>
+                
+                <div class="donation-cards-grid">
+                    <!-- Cartable -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-cartable" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-cartable" class="card-label"><strong>🎒 Parrainer un Cartable</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Prix unitaire : 20 € / 100 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Nombre :</label>
+                                <input type="number" id="qty-cartable" value="1" min="1" oninput="calculateTotal()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ecolage -->
+                    <div class="donation-card">
+                        <div class="card-checkbox-wrapper">
+                            <input type="checkbox" id="item-ecolage" class="item-checkbox" onchange="calculateTotal()">
+                            <label for="item-ecolage" class="card-label"><strong>✍️ Prendre en charge l'Écolage</strong></label>
+                        </div>
+                        <div class="card-body">
+                            <div class="unit-prices">Frais d'écolage : 10 € / 25 000 Ar</div>
+                            <div class="qty-selector">
+                                <label>Mois/Élèves :</label>
+                                <input type="number" id="qty-ecolage" value="1" min="1" oninput="calculateTotal()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soutien global -->
+                <div class="donation-card full-width-card highlight-card" style="margin-bottom: 30px;">
+                    <div class="card-checkbox-wrapper">
+                        <input type="checkbox" id="item-eleves" class="item-checkbox" onchange="calculateTotal()">
+                        <label for="item-eleves" class="card-label"><strong>Soutenir globalement les élèves en situation précaire</strong></label>
+                    </div>
+                    <p class="card-description">Aide générale d'urgence pour le paiement des fournitures et des imprévus scolaires tout au long de l'année.</p>
                 </div>
             </div>
+
+            <!-- NOUVELLE BARRE DE TOTAL : Placée normalement dans la page pour éviter les bugs sur mobile -->
+            <div class="donation-summary-bar-static" id="summary-bar">
+                <div class="total-display">
+                    <span class="total-title">Votre sélection actuelle :</span>
+                    <div class="total-amounts">
+                        <span id="total-euro">0 €</span> | <span id="total-ariary">0 Ariary</span>
+                    </div>
+                </div>
+                <button onclick="sendDonationToWhatsApp()" class="btn-whatsapp-large">
+                    💬 Envoyer cette sélection sur WhatsApp
+                </button>
+            </div>
+
+        </section>
+    </div>
+</div>
+
 
         </section>
     </div>
