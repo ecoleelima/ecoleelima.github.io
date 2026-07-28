@@ -181,3 +181,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+let index = 0;
+
+const slides = document.querySelector(".slides");
+const total = document.querySelectorAll(".slide").length;
+
+function nextSlide(){
+    index++;
+
+    if(index >= total){
+        index = 0;
+    }
+
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Changer de photo toutes les 6 secondes
+setInterval(nextSlide, 6000);
