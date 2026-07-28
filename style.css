@@ -944,3 +944,24 @@ transform:translateX(0);
 }
 
 }
+
+.donation-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-don-page,
+.btn-whatsapp-large {
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-don-page {
+    background: #D4A017;
+    color: white;
+}
