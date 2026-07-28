@@ -92,6 +92,19 @@
 
 
 <body>
+    <div class="stars">
+    <div class="star" style="top:10%; left:15%;"></div>
+    <div class="star" style="top:20%; left:80%;"></div>
+    <div class="star" style="top:35%; left:30%;"></div>
+    <div class="star" style="top:50%; left:60%;"></div>
+    <div class="star" style="top:65%; left:10%;"></div>
+    <div class="star" style="top:75%; left:90%;"></div>
+    <div class="star" style="top:85%; left:45%;"></div>
+    <div class="star" style="top:15%; left:55%;"></div>
+    <div class="star" style="top:40%; left:75%;"></div>
+    <div class="star" style="top:90%; left:25%;"></div>
+</div>
+    
     <header>
         <div class="logo-text"><h1>ÉCOLE ELIMA</h1><span>Excellence & Avenir</span></div>
         <button class="menu-burger" id="burgerMenu"><span></span><span></span><span></span></button>
@@ -434,5 +447,16 @@ form.addEventListener("submit", async function(e) {
     }
 });
 </script>
+<script>
+for(let i = 0; i < 30; i++){
+    let star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    document.querySelector('.stars').appendChild(star);
+}
+</script>
+
 </body>
 </html>
