@@ -345,19 +345,32 @@
                 </div>
             </div>
 
-            <!-- NOUVELLE BARRE DE TOTAL : Placée normalement dans la page pour éviter les bugs sur mobile -->
-            <div class="donation-summary-bar-static" id="summary-bar">
-                <div class="total-display">
-                    <span class="total-title">Votre sélection actuelle :</span>
-                    <div class="total-amounts">
-                        <span id="total-euro">0 €</span> | <span id="total-ariary">0 Ariary</span>
-                    </div>
-                </div>
-                <button onclick="sendDonationToWhatsApp()" class="btn-whatsapp-large">
-                    💬 Envoyer cette sélection sur WhatsApp
-                </button>
-            </div>
+     <!-- NOUVELLE BARRE DE TOTAL -->
+<div class="donation-summary-bar-static" id="summary-bar">
 
+    <div class="total-display">
+        <span class="total-title">Votre sélection actuelle :</span>
+        <div class="total-amounts">
+            <span id="total-euro">0 €</span> |
+            <span id="total-ariary">0 Ariary</span>
+        </div>
+    </div>
+
+    <div class="donation-buttons">
+
+        <!-- Voir la page de don -->
+        <a href="dons.html" class="btn-don-page">
+            ❤️ Voir les dons
+        </a>
+
+        <!-- Envoyer sur WhatsApp -->
+        <button onclick="sendDonationToWhatsApp()" class="btn-whatsapp-large">
+            💬 Envoyer cette sélection sur WhatsApp
+        </button>
+
+    </div>
+
+</div>
         </section>
     </div>
 </div>
