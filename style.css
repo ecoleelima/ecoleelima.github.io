@@ -1339,3 +1339,414 @@ nav.links a:hover{
     color: #d0d5dd;
     font-size: 14px;
 }
+
+/* =====================================================
+   TITRES DE SECTION
+===================================================== */
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 14px 0;
+}
+
+.section-heading p {
+    color: #667085;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PROCESSUS
+===================================================== */
+
+.process-section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    background: white;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #edf0f4;
+    transition: .3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.07);
+}
+
+.process-number {
+    color: #d6ad58;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.process-icon {
+    font-size: 30px;
+    margin: 25px 0 15px;
+}
+
+.process-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    color: #667085;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BÉNÉFICIAIRES
+===================================================== */
+
+.beneficiaries-section {
+    background: white;
+    padding: 100px 25px;
+}
+
+.beneficiaries-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.beneficiary-card {
+    background: #fff;
+    border: 1px solid #e9edf2;
+    transition: .3s ease;
+}
+
+.beneficiary-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+}
+
+.beneficiary-photo {
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+}
+
+.beneficiary-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.beneficiary-card:hover .beneficiary-photo img {
+    transform: scale(1.04);
+}
+
+.beneficiary-photo span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    background: #172033;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.beneficiary-content {
+    padding: 25px;
+}
+
+.beneficiary-content small {
+    color: #b58a35;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.beneficiary-content h3 {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.beneficiary-content p {
+    color: #667085;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   GALERIE
+===================================================== */
+
+.scholarship-gallery {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 25px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-large {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   PARTENAIRE
+===================================================== */
+
+.partner-section {
+    max-width: 1150px;
+    margin: 0 auto 80px;
+    padding: 65px;
+    background: #172033;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.partner-content {
+    max-width: 700px;
+}
+
+.partner-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.partner-content p {
+    color: #d0d5dd;
+    line-height: 1.8;
+}
+
+.partner-btn {
+    display: inline-flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+    padding: 14px 22px;
+    background: #d6ad58;
+    color: #172033;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 6px;
+    transition: .3s ease;
+}
+
+.partner-btn:hover {
+    transform: translateY(-3px);
+}
+
+.partner-decoration {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 150px;
+}
+
+.partner-decoration div {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.08);
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   NOTE CONFIDENTIALITÉ
+===================================================== */
+
+.privacy-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 25px 70px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.privacy-note span {
+    font-size: 18px;
+}
+
+.privacy-note p {
+    margin: 0;
+    color: #8a94a6;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .scholarship-hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .scholarship-hero-content {
+        max-width: 750px;
+    }
+
+    .scholarship-hero-image img {
+        height: 450px;
+    }
+
+    .scholarship-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficiaries-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .scholarship-hero {
+        padding: 60px 18px;
+    }
+
+    .scholarship-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .scholarship-hero-image img {
+        height: 360px;
+    }
+
+    .hero-badge {
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .scholarship-intro {
+        padding: 65px 20px;
+    }
+
+    .intro-title h2,
+    .section-heading h2,
+    .partner-content h2 {
+        font-size: 30px;
+    }
+
+    .scholarship-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px 15px;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.15);
+        padding: 20px 10px;
+    }
+
+    .process-section,
+    .scholarship-gallery {
+        padding: 70px 18px;
+    }
+
+    .process-grid,
+    .beneficiaries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficiaries-section {
+        padding: 70px 18px;
+    }
+
+    .beneficiary-photo {
+        height: 330px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 240px);
+    }
+
+    .gallery-large {
+        grid-row: auto;
+    }
+
+    .partner-section {
+        margin: 0 18px 60px;
+        padding: 40px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .partner-decoration {
+        display: none;
+    }
+
+    .partner-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
