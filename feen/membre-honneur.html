@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription membre d’honneur | ELIMA</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #243447;
+}
+.form-container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+.logo {
+  display: block;
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  margin: auto;
+}
+h1, h2 {
+  text-align: center;
+  color: #125c9c;
+}
+h1 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+h2 {
+  font-size: 20px;
+}
+.description {
+  text-align: center;
+  line-height: 1.6;
+  color: #555;
+}
+.section-title {
+  background: #125c9c;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  margin-top: 25px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccd5df;
+  border-radius: 7px;
+  font-size: 15px;
+}
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.checkbox-group label {
+  font-weight: normal;
+  margin-top: 10px;
+}
+.checkbox-group input {
+  width: auto;
+  margin-right: 8px;
+}
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #125c9c;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 25px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0b416e;
+}
+.reset {
+  background: #777;
+  margin-top: 10px;
+}
+.notice {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #e3f7e8;
+  color: #176b35;
+  line-height: 1.5;
+}
+.small {
+  font-size: 13px;
+  color: #666;
+  margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="form-container">
+
+  <!-- Remplacez le chemin par celui de votre logo -->
+  <img src="images/logo.png"
+       alt="Logo École Privée ELIMA"
+       class="logo">
+
+  <h1>ÉCOLE PRIVÉE ELIMA</h1>
+  <p style="text-align:center;">Nosy Be – Madagascar</p>
+
+  <h2>Formulaire d'inscription</h2>
+  <h2>Membre d'honneur</h2>
+
+  <p class="description">
+    Nous remercions les personnes qui souhaitent soutenir
+    le développement de notre école et l'avenir de nos élèves.
+    Remplissez ce formulaire pour nous faire connaître votre intérêt.
+  </p>
+
+  <form id="honorForm"
+     action="https://formspree.io/f/xpqeoded"
+      method="POST">
+
+    <h3 class="section-title">1. Informations personnelles</h3>
+
+    <label for="nom">Nom *</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="prenoms">Prénoms *</label>
+    <input type="text" id="prenoms" name="prenoms" required>
+
+    <label for="naissance">Date de naissance</label>
+    <input type="date" id="naissance" name="naissance">
+
+    <label for="nationalite">Nationalité</label>
+    <input type="text" id="nationalite" name="nationalite">
+
+    <label for="pays">Pays de résidence *</label>
+    <input type="text" id="pays" name="pays" required>
+
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse">
+
+    <label for="email">Adresse e-mail *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telephone">Téléphone / WhatsApp</label>
+    <input type="tel" id="telephone" name="telephone">
+
+    <h3 class="section-title">2. Type de soutien envisagé</h3>
+
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="soutien" value="Soutien financier occasionnel">
+        Soutien financier occasionnel
+      </label>
+
+      <label>
+        <input type="checkbox" name="soutien" value="Don de matériel scolaire">
+        Don de matériel scolaire
+      </label>
+
+      <label>
+        <input type="checkbox" name="soutien" value="Soutien aux élèves en difficulté">
+        Soutien aux élèves en difficulté
+      </label>
+
+      <label>
+        <input type="checkbox" name="soutien" value="Projets de développement">
+        Contribution à des projets de développement
+      </label>
+
+      <label>
+        <input type="checkbox" name="soutien" value="Conseils et accompagnement">
+        Conseils et accompagnement
+      </label>
+    </div>
+
+    <label for="autre">Autre type de soutien</label>
+    <input type="text" id="autre" name="autre">
+
+    <h3 class="section-title">3. Message à l'école</h3>
+
+    <label for="message">Observations ou message</label>
+    <textarea id="message" name="message"
+      placeholder="Écrivez votre message ici..."></textarea>
+
+    <h3 class="section-title">4. Engagement</h3>
+
+    <label style="font-weight:normal;">
+      <input type="checkbox" id="engagement" required>
+      Je souhaite soutenir l'École Privée ELIMA selon mes
+      possibilités. Je comprends que le titre de membre d'honneur
+      est une marque de reconnaissance et n'implique pas
+      automatiquement une obligation financière ni un pouvoir
+      de décision dans la gestion de l'école. *
+    </label>
+
+  <button type="submit">
+    Envoyer ma demande d'inscription
+  </button>
+
+  <button type="reset" class="reset">
+    Effacer le formulaire
+  </button>
+
+</form>
+   
+
+  <div class="notice" id="notice" role="status">
+    Merci pour votre intérêt envers l'École Privée ELIMA.
+    Votre formulaire est prêt à être transmis à la direction.
+  </div>
+
+  <p class="small">
+    * Champs obligatoires. Vos informations doivent être traitées
+    avec confidentialité et utilisées uniquement pour la gestion
+    de votre demande.
+  </p>
+
+</div>
+
+<script>
+const form = document.getElementById("honorForm");
+const notice = document.getElementById("notice");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const donnees = new FormData(form);
+  const soutiens = donnees.getAll("soutien");
+
+  const resume = {
+    nom: donnees.get("nom"),
+    prenoms: donnees.get("prenoms"),
+    email: donnees.get("email"),
+    pays: donnees.get("pays"),
+    soutiens: soutiens,
+    message: donnees.get("message")
+  };
+
+  /*
+   * Ce formulaire fonctionne dans le navigateur,
+   * mais l'envoi réel nécessite un service de formulaire
+   * ou un serveur connecté à votre site.
+   */
+  console.log("Demande d'inscription :", resume);
+
+  notice.style.display = "block";
+  notice.textContent =
+    "Merci " + resume.prenoms + " " + resume.nom +
+    " ! Votre demande a été préparée. " +
+    "La direction de l'École Privée ELIMA pourra vous contacter par e-mail.";
+
+  notice.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+</script>
+
+</body>
+</html>
